@@ -6,11 +6,11 @@ app = Flask(__name__,template_folder='./template')
 def index():
     return render_template('index.html')
 
-@app.route("login")
+@app.route("/login")
 def login():
     return render_template('login.html')
 
-@app.route('education')
+@app.route('/education')
 def education():
     return render_template('education.html')
 
