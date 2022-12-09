@@ -89,7 +89,6 @@ html {
    }
   
   main {
-    
     justify-content: center;
     align-items: center;
     margin-top: 100px;
@@ -101,8 +100,7 @@ html {
     justify-content: center;
     flex-direction: column;
     margin: 0;
-  }
-  
+}
   footer, header {
   background-color: #282727;
   }
@@ -174,15 +172,9 @@ html {
     font-size: 18px;
   }
   button:hover {
-  background: #FAEEEE;
+  	background: #FAEEEE;
 	color: #282727;
-  font-size: 18px;
+  	font-size: 18px;
   }
-  main {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    margin: 0;
-  }
+ 
   
