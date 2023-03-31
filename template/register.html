@@ -15,6 +15,10 @@
         <h2 class="text-logo">IT HUB</h2>
         </header>
     <main>
+      <div class="background">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        </div>
      <form action="{{ url_for('reg')}}", method="POST">
       <input id="username" name="username" type="text" 
       class="input"  placeholder="Имя пользователя" required>
@@ -23,7 +27,7 @@
       <input id="repeat password" name="repeat password" 
       type="password" class="input" 
       placeholder="Повторите пароль" required>
-      <input class="button" type="submit" value="Регистрация">
+      <button>Регистрация</button>
       <a class="noaccounts" href="">Уже есть аккаунт?</a>
      </form>
     </main>

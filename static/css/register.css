@@ -50,40 +50,96 @@ body {
     font-size: 35px;
    }
 
+   .circle:first-child{
+    background: linear-gradient(
+    rgba(153,102,204, 0.5),
+    #9966CC
+    );
+    right: -90px;
+    top: -10px;
+    }
+    .circle:last-child{
+    background: linear-gradient(
+    to right,
+    rgba(153,102,204, 0.5),
+    #9966CC
+    );
+    left: -8%;
+    bottom: 30px;
+    }
+    .background .circle{
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    border-radius: 50%;
+    filter: grayscale(60%);
+    filter: blur(3px);
+    }
+    .background{
+    width: 430px;
+    height: 520px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+  }
   form {
-    border: 1.5px solid #f0f0f0;
-    border-radius: 1em;
-    background-color: #282727;
-    display: flex;
-    flex-direction: column;
-    vertical-align: middle;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    height: 350px;
+    background-color: rgba(40, 39, 39, 0.9);;
     width: 400px;
-    max-width: 500px;
-    min-width: 300px;
-    margin: 0 auto;
-    padding-top: 20px;
     position: absolute;
     transform: translate(-50%,-50%);
     top: 45%;
     left: 50%;
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    padding: 50px 35px;
 /*border-radius: 15px;
 backdrop-filter: blur(5px);
 border: 2px solid rgba(255,255,255,0.1);
 padding: 50px 35px; */
   }
   
-  .input {
-    border-radius: 3rem;
-    border: 1px solid #f0f0f0;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    color: #f0f0f0;
-    background-color: #282727;
-    font-size: 15px;
-    width: 250px;
-    margin: 15px auto;
-    height: 30px;
-  }
+  form *{
+    color: #D9D9D9;
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;
+    }
+    label{
+    display: block;
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: 500;
+    }
+    input{
+    display: block;
+    height: 50px;
+    width: 100%;
+    background-color: rgba(255,255,255,0.07);
+    border-radius: 15px;
+    padding: 0 10px;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 300;
+    border: solid 1px #D9D9D9;
+    }
+    button{
+      margin-top: 20px;
+      width: 50%;
+      background-color: #282727;
+      color: #D9D9D9;
+      padding: 15px 0;
+      font-size: 18px;
+      font-weight: 600;
+      border-radius: 25px;
+      border: solid 1px #D9D9D9;
+      cursor: pointer;
+      position: relative;
+      transform: translate(50%, 0);
+      }
   
   :focus::-webkit-input-placeholder {color: transparent}
   :focus::-moz-placeholder          {color: transparent}
@@ -115,7 +171,7 @@ padding: 50px 35px; */
   .noaccounts {
     display: flex;
     flex-direction: column;
-    margin-bottom: 5px;
+    margin-top: 10px;
     text-align: center;
     text-decoration: none;
     color: white;
@@ -153,138 +209,142 @@ padding: 50px 35px; */
   
   
   @media (max-width: 1200px) {
-     .text-logo {
-      font-size: 35px;
+    .text-logo {
+     font-size: 35px;
+    }
+ 
+    .img2 {
+     height: 125px;
+     padding-left: 400px;
+     padding-top: 15px;
+     padding-bottom: 15px;
      }
-  
-     .img2 {
-      height: 125px;
-      padding-left: 400px;
-      padding-top: 15px;
-      padding-bottom: 15px;
-      }
-     
-      .img1 {
-        height: 125px;
-        padding-right: 200px;
-        padding-top: 15px;
-        padding-bottom: 15px;
-        justify-content: center;
-      }
-  
-      .text-slogan {
-        font-size: 21px;
-      }
-  
-  }
-  @media (max-width: 1024px) {
-    .img2 {
-      height: 125px;
-      padding-left: 400px;
-      padding-top: 15px;
-      padding-bottom: 15px;
-      }
-     
-      .img1 {
-        height: 125px;
-        padding-right: 100px;
-        padding-top: 15px;
-        padding-bottom: 15px;
-        justify-content: center;
-      }
-  
-      .text-slogan {
-        font-size: 18px;
-      }
-      form { 
-        display: table-cell;
-       text-align: center;
-       vertical-align: middle;
-       margin: 0 auto;
-       top: 45%;
-      left: 50%;
+    
+     .img1 {
+       height: 125px;
+       padding-right: 200px;
+       padding-top: 15px;
+       padding-bottom: 15px;
+       justify-content: center;
+     }
+ 
+     .text-slogan {
+       font-size: 21px;
+     }
+ 
+ }
+ @media (max-width: 1024px) {
+   .img2 {
+     height: 125px;
+     padding-left: 400px;
+     padding-top: 15px;
+     padding-bottom: 15px;
+     }
+    
+     .img1 {
+       height: 125px;
+       padding-right: 100px;
+       padding-top: 15px;
+       padding-bottom: 15px;
+       justify-content: center;
+     }
+ 
+     .text-slogan {
+       font-size: 18px;
+     }
+     form { 
+       display: table-cell;
+      text-align: center;
+      vertical-align: middle;
+      margin: 0 auto;
+      top: 45%;
+     left: 50%;
+       }
+       button{
+
+       right: 25%;
         }
-  }
-  @media (max-width: 768px) { 
-  .img1 {
-    height: 125px;
-    padding-right: 400px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    justify-content: center;
-  }
-  .img2 {
-    height: 125px;
-    padding-left: 50px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    justify-content: center;
-  }
-  
-  .text-slogan {
-    font-size: 15px;
-  }
-  .footer {
-    position: fixed;
-  }
-  }
-  @media (max-width: 480px) {
-    .img1 {
-      height: 105px;
-      padding-right: 220px;
-      padding-top: 15px;
-      padding-bottom: 15px;
-      justify-content: center;
-    }
-    .img2 {
-      height: 105px;
-      padding-left: 50px;
-      padding-top: 15px;
-      padding-bottom: 15px;
-      justify-content: center;
-    }
-    .text-slogan {
-      font-size: 10px;
-    }
-    form { 
-      display: table-cell;
-     text-align: center;
-     vertical-align: middle;
-     margin: 0 auto;
-     top: 45%;
-    left: 50%;
-      width: 350px;
-      }
-      .background .circle{
-        display: none;
-        }
-    }
-    @media (max-width: 376px) {
-      form {
-        left: 50%;
-        top: 50%;
-        width: 300px;
-        position: absolute;
-        transform: translate(-50%,-50%);
-      }
-        .background .circle{
-        display: none;
-        }
-        .text-slogan {
-          font-size: 9px;
-        }
-        .img1 {
-          height: 85px;
-          padding-right: 190px;
-          padding-top: 15px;
-          padding-bottom: 15px;
-          justify-content: center;
-        }
-        .img2 {
-          height: 85px;
-          padding-left: 50px;
-          padding-top: 15px;
-          padding-bottom: 15px;
-          justify-content: center;
-        }
-    }
+    
+ }
+ @media (max-width: 768px) { 
+ .img1 {
+   height: 125px;
+   padding-right: 400px;
+   padding-top: 15px;
+   padding-bottom: 15px;
+   justify-content: center;
+ }
+ .img2 {
+   height: 125px;
+   padding-left: 50px;
+   padding-top: 15px;
+   padding-bottom: 15px;
+   justify-content: center;
+ }
+ 
+ .text-slogan {
+   font-size: 15px;
+ }
+ .footer {
+   position: fixed;
+ }
+ }
+ @media (max-width: 480px) {
+   .img1 {
+     height: 105px;
+     padding-right: 190px;
+     padding-top: 15px;
+     padding-bottom: 15px;
+     justify-content: center;
+   }
+   .img2 {
+     height: 105px;
+     padding-left: 20px;
+     padding-top: 15px;
+     padding-bottom: 15px;
+     justify-content: center;
+   }
+   .text-slogan {
+     font-size: 8px;
+   }
+   form { 
+     display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    margin: 0 auto;
+    top: 45%;
+   left: 50%;
+     width: 350px;
+     }
+     .background .circle{
+       display: none;
+       }
+   }
+   @media (max-width: 376px) {
+     form {
+       left: 55%;
+       top: 50%;
+       width: 300px;
+       position: absolute;
+     }
+       .background .circle{
+       display: none;
+       }
+       .text-slogan {
+         font-size: 9px;
+       }
+       .img1 {
+         height: 85px;
+         padding-right: 220px;
+         padding-top: 15px;
+         padding-bottom: 15px;
+         justify-content: center;
+       }
+       .img2 {
+         height: 85px;
+         padding-left: 50px;
+         padding-top: 15px;
+         padding-bottom: 15px;
+         justify-content: center;
+       }
+   }
